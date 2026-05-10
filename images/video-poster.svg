@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#214d3b"/>
+      <stop offset="100%" stop-color="#e1b56a"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <circle cx="760" cy="110" r="56" fill="#ffd37d" opacity="0.9"/>
+  <rect x="120" y="300" width="720" height="120" rx="24" fill="#f8f2dd" opacity="0.82"/>
+  <text x="160" y="355" font-family="Georgia, serif" font-size="44" fill="#173426">Campus Loop Preview</text>
+  <text x="160" y="400" font-family="Arial, sans-serif" font-size="24" fill="#173426">Local offline video placeholder</text>
+  <circle cx="480" cy="220" r="58" fill="#ffffff" opacity="0.88"/>
+  <polygon points="465,190 465,250 515,220" fill="#c96c3a"/>
+</svg>

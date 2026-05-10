@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO: Basic metadata for search engines and browsers -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Green Hub is a one-page sustainability website featuring local media, accessibility-friendly design, a self-validating form, and an instant feedback quiz.">
+  <meta name="keywords" content="sustainability, campus, green living, one page website, HTML5, CSS3, JavaScript">
+  <meta name="author" content="Student Project">
+  <meta name="theme-color" content="#1f4d3a">
+  <title>Campus Green Hub</title>
+  <!-- CSS: Favicon reference -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <!-- CSS: External stylesheet only -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header: Site identity and one-page navigation -->
+  <header class="site-header" id="top">
+    <div class="branding">
+      <p class="eyebrow">One Page Eco Guide</p>
+      <h1>Campus Green Hub</h1>
+      <p class="intro">A compact guide for students who want practical ways to reduce waste, save energy, and build better campus habits.</p>
+    </div>
+    <nav aria-label="Primary navigation">
+      <ul class="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#tips">Tips</a></li>
+        <li><a href="#join">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section 1: Introductory content using semantic HTML -->
+    <section id="about" class="panel hero-panel" aria-labelledby="about-heading">
+      <article>
+        <h2 id="about-heading">Why small campus actions matter</h2>
+        <p>Each reusable bottle, switched off light, and recycled notebook seems minor on its own, but together these habits create cleaner spaces and stronger communities.</p>
+        <p class="columns-text">Students can lead local change by choosing refill stations, reducing single-use plastics, sharing unused materials, and supporting low-energy habits in dorms and study rooms. This page is designed to work offline, making it easy to revisit simple actions anywhere on campus.</p>
+      </article>
+
+      <!-- Interactive HTML5 element: Figure with caption -->
+      <figure class="feature-card">
+        <img src="images/campus-garden.svg" alt="Illustration of a garden, sun, and students around a campus space">
+        <figcaption>Green spaces support wellbeing, cleaner air, and community learning.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Section 2: Multimedia content with local video and audio -->
+    <section id="media" class="panel media-panel" aria-labelledby="media-heading">
+      <h2 id="media-heading">Offline media corner</h2>
+      <div class="media-grid">
+        <article class="media-card">
+          <h3>Short local video</h3>
+          <video controls preload="metadata" poster="images/video-poster.svg" aria-describedby="video-caption">
+            <source src="video/campus-loop.mp4" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+          <p id="video-caption">A locally stored MP4 video provided for this project and embedded for offline playback.</p>
+        </article>
+
+        <article class="media-card">
+          <h3>Quick audio reminder</h3>
+          <audio controls preload="metadata" aria-describedby="audio-caption">
+            <source src="audio/waste-tips.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <p id="audio-caption">A locally stored MP3 with five short tips about reducing waste, reusing materials, and promoting recycling.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 3: Tips, details disclosure, and progress display -->
+    <section id="tips" class="panel tips-panel" aria-labelledby="tips-heading">
+      <h2 id="tips-heading">Simple green actions</h2>
+      <article class="tips-layout">
+        <div>
+          <p>Focus on actions that are easy to repeat. Consistency is more powerful than perfection, especially in a busy student routine.</p>
+
+          <!-- Interactive HTML5 element: Details disclosure -->
+          <details>
+            <summary>Open the weekly checklist</summary>
+            <ul>
+              <li>Carry one refillable bottle and mug.</li>
+              <li>Unplug chargers when they are not in use.</li>
+              <li>Walk or share transport for short campus trips.</li>
+              <li>Print only when digital notes are not suitable.</li>
+            </ul>
+          </details>
+        </div>
+
+        <aside class="progress-card">
+          <h3>Recycling goal</h3>
+          <p>Track a simple target for your class or study group.</p>
+          <!-- Interactive HTML5 element: Progress meter -->
+          <label for="recycling-progress">Current bottle collection progress</label>
+          <progress id="recycling-progress" value="72" max="100">72%</progress>
+          <p class="progress-copy">72% of this month’s bottle collection target has been reached.</p>
+        </aside>
+      </article>
+    </section>
+
+    <!-- Section 4: Self-validating form and self-correcting quiz -->
+    <section id="join" class="panel join-panel" aria-labelledby="join-heading">
+      <h2 id="join-heading">Join the challenge</h2>
+      <div class="join-grid">
+        <!-- Form: Self-validating contact form -->
+        <article class="form-card">
+          <h3>Volunteer sign-up</h3>
+          <form id="signup-form" novalidate>
+            <div class="field">
+              <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+              <input id="full-name" name="full-name" type="text" aria-describedby="name-error">
+              <p class="error-message" id="name-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" aria-describedby="email-error">
+              <p class="error-message" id="email-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="interest">Area of interest</label>
+              <textarea id="interest" name="interest" rows="4" aria-describedby="interest-help"></textarea>
+              <p id="interest-help" class="helper-text">Tell us which activity you would like to support.</p>
+            </div>
+
+            <button type="submit">Submit interest</button>
+            <p id="form-success" class="success-message" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <!-- Quiz: Single self-correcting question with immediate feedback -->
+        <article class="quiz-card">
+          <h3>Quick eco quiz</h3>
+          <form id="quiz-form">
+            <fieldset>
+              <legend>Which habit usually saves the most reusable materials over time?</legend>
+              <label>
+                <input type="radio" name="quiz-answer" value="wrong">
+                Taking a new plastic bottle every day
+              </label>
+              <label>
+                <input type="radio" name="quiz-answer" value="correct">
+                Carrying one refillable bottle every day
+              </label>
+              <label>
+                <input type="radio" name="quiz-answer" value="wrong">
+                Throwing paper into mixed waste bins
+              </label>
+            </fieldset>
+            <p id="quiz-feedback" class="quiz-feedback" aria-live="polite">Select an answer to receive instant feedback.</p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: Page summary and accessibility statement -->
+  <footer class="site-footer">
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+
+  <!-- JavaScript: External script only -->
+  <script src="script.js"></script>
+</body>
+</html>
